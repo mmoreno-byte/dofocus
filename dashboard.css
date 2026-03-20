@@ -1,0 +1,366 @@
+/*Cuerpo (principal)*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F9FB;
+    color: #243447; 
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h2 {
+    margin-top: 0;
+    color: inherit;
+}
+
+
+/*Header*/
+
+.main-header {
+    background-color: #243447;
+    color: white;
+    padding: 20px 40px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/*Icono del logo con efecto*/
+
+.logo-icon {
+    width: 14px;
+    height: 14px;
+    background-color: #4CB5AE;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(76,181,174,0.6);
+}
+
+.logo-icon::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #4CB5AE;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info a {
+    color: #E4EEF2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.user-info a:hover {
+    color: #4CB5AE;
+}
+
+/*Barra de progreso*/
+
+.progreso-wrapper {
+    margin-top: 15px;
+}
+
+.barra-progreso-container {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barra-progreso {
+    height: 100%;
+    background-color: #4CB5AE;
+    transition: width 0.4s ease;
+}
+
+/*Formularios*/
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CB5AE;
+    box-shadow: 0 0 0 2px rgba(76,181,174,0.15);
+}
+
+/*Botones*/
+
+button {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4CB5AE;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #3AA39C;
+    transform: translateY(-2px);
+}
+
+/*Estadísticas*/
+
+.stats-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 150px;
+    background-color: #F1F7F8;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*Tareas*/
+
+.tareas-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.crear-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.crear-form input {
+    flex: 1;
+    min-width: 160px;
+}
+
+.filtro-select {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+}
+
+.tarea {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 12px;
+    background-color: #F1F7F8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+.tarea small {
+    color: #5f6f7a;
+}
+
+/*Temporizador*/
+
+#timer {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 30px 0;
+    text-align: center;
+    color: #243447;
+}
+
+/*Modo oscuro*/
+
+.dark-mode {
+    background-color: #1E2A38;
+    color: #E4EEF2;
+}
+
+.dark-mode section {
+    background-color: #2C3E50;
+}
+
+.dark-mode .stat-card {
+    background-color: #2F3E4F;
+}
+
+.dark-mode .tarea {
+    background-color: #2F3E4F;
+    color: #FFFFFF;
+}
+
+.dark-mode .tarea small {
+    color: #C8D9E4;
+}
+
+.dark-mode #timer {
+    color: #FFFFFF;
+}
+
+.dark-mode input,
+.dark-mode .filtro-select {
+    background-color: #2F3E4F;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/*Arreglos errores header*/
+
+.main-header {
+    background-color: #243447;
+    color: white;
+    padding: 25px 40px 15px 40px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 0.95rem;
+}
+
+.user-info span,
+.user-info a {
+    color: #E4EEF2;
+    text-decoration: none;
+}
+
+.user-info a:hover {
+    color: #4CB5AE;
+}
+
+/* Barra progreso visible */
+
+.progreso-wrapper {
+    margin-top: 15px;
+}
+
+.barra-progreso-container {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.barra-progreso {
+    height: 100%;
+    background-color: #4CB5AE;
+    transition: width 0.4s ease;
+}
+
+.progreso-wrapper small {
+    color: #C8D9E4;
+    font-size: 0.85rem;
+}
+
+/* Dark mode header */
+.dark-mode .main-header {
+    background-color: #16202B;
+}
+
+.dark-mode .user-info a {
+    color: #E4EEF2;
+}
+
+/*Arreglo errores visibilización títulos modo oscuro*/
+
+.dark-mode h2 {
+    color: #FFFFFF !important;
+}
+
+.dark-mode .resumen h2,
+.dark-mode .estadisticas h2,
+.dark-mode .tareas h2,
+.dark-mode .temporizador h2 {
+    color: #FFFFFF !important;
+}
+
+/* Texto normal dentro de sections */
+.dark-mode section {
+    color: #E4EEF2 !important;
+}
+
+/* Títulos de las tarjetas */
+.dark-mode .stat-card strong {
+    color: #FFFFFF !important;
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+    }
+
+    .crear-form {
+        flex-direction: column;
+    }
+
+    .tarea {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #timer {
+        font-size: 2.8rem;
+    }
+}

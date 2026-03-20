@@ -1,0 +1,136 @@
+/*Base*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7F9FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /*Se hace uso del min-height para evitar problemas en el responsive de la aplicación por si apareciese el teclado virtual del móvil*/
+    margin: 0;
+    padding: 20px;
+}
+
+/*Título*/
+
+h2 {
+    text-align: center;
+    color: #243447;
+    margin-bottom: 25px;
+}
+
+/*Contenedor*/
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(36, 52, 71, 0.08);
+    width: 100%;
+    max-width: 380px;
+
+    /* Animación suave al cargar la vista para cambiar entre pestañas login/registro */
+    animation: fadeSlideIn 0.9s ease;
+}
+.success-box {
+    background-color: #E6F8F3;
+    color: #2E8B75;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    animation: fadeError 0.4s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Inptus*/
+
+.input-g {
+    margin-bottom: 18px;
+}
+
+.input-g input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.input-g input:focus {
+    outline: none;
+    border-color: #4CB5AE;
+    box-shadow: 0 0 0 2px rgba(76,181,174,0.15);
+}
+
+/*Botón*/
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CB5AE;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: #3AA39C;
+}
+
+/*Enlaces*/
+
+.options {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.options a {
+    color: #4CB5AE;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/*Responsive*/
+
+@media (max-width: 480px) {
+
+    body {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .login-container {
+        padding: 25px;
+        border-radius: 12px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .btn-login {
+        font-size: 15px;
+    }
+
+}
