@@ -2,7 +2,7 @@
 
 Aplicación web de gestión de tareas con sistema de gamificación, desarrollada como proyecto final del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW).
 
-🌐 **Demo en vivo:** [https://dofocus.infinityfreeapp.com](https://dofocus.infinityfreeapp.com) *(actualiza con tu URL real)*
+Para ejecutar la aplicación, clona el repositorio y sigue las instrucciones de instalación local con XAMPP.
 
 ---
 
@@ -36,8 +36,7 @@ DoFocus es una aplicación de productividad que permite a los usuarios organizar
 | Frontend      | HTML5, CSS3, JavaScript |
 | Backend       | PHP 8                   |
 | Base de datos | MySQL                   |
-| Hosting       | InfinityFree            |
-| Entorno local | XAMPP                   |
+| Servidor      | XAMPP (Apache + MySQL)  |
 
 ---
 
@@ -132,18 +131,18 @@ CREATE TABLE tareas (
 
 ---
 
-## ⚠️ Limitaciones de la demo
+## ⚠️ Notas importantes
 
-La demo alojada en InfinityFree es una versión funcional del proyecto con algunas limitaciones propias del entorno de hosting gratuito:
+Este es un proyecto de fin de ciclo diseñado para desarrollo y aprendizaje. Algunas funcionalidades están implementadas a nivel de lógica pero requerirían configuración adicional para un entorno de producción:
 
-| Funcionalidad | Estado en la demo | En un entorno real |
+| Funcionalidad | En desarrollo local | En producción |
 |---|---|---|
-| Recuperación de contraseña | El formulario existe pero el email no se envía | Se integraría **PHPMailer** o **SendGrid** para el envío real |
-| Variables de entorno | Configuradas manualmente en el panel de InfinityFree | Se gestionarían con una librería como `vlucas/phpdotenv` |
+| Recuperación de contraseña | El formulario existe pero el email no se envía | Se necesitaría integrar **PHPMailer** o **SendGrid** |
+| Variables de entorno | Archivo `.env` local | Se recomienda usar `vlucas/phpdotenv` |
 
 ### Sobre la recuperación de contraseña
 
-La lógica está completamente implementada a nivel de backend y base de datos: se genera un token seguro, se almacena con fecha de expiración y existe el flujo completo de validación y actualización de contraseña. Lo único que falta para que funcione en producción real es conectar un servicio de envío de email, algo que InfinityFree no permite en su plan gratuito.
+La lógica está completamente implementada a nivel de backend y base de datos: se genera un token seguro, se almacena con fecha de expiración y existe el flujo completo de validación y actualización de contraseña. Para que el envío de email funcione en producción, necesitarías configurar un servicio de envío como PHPMailer o SendGrid.
 
 ---
 
